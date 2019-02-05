@@ -20,7 +20,7 @@ namespace EasyLifeAppDesktop
             this.Rooms = new HashSet<Room>();
         }
     
-        public int HouseId { get; set; }
+        public int? HouseId { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
         public byte[] Photo { get; set; }
@@ -29,5 +29,15 @@ namespace EasyLifeAppDesktop
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }
+
+        public House(string name, string adress, byte[] photo, decimal state, string comments)
+        {
+            Name = name;
+            Adress = adress;
+            Photo = photo;
+            State = state;
+            Comments = comments;
+            Rooms = new List<Room>();
+        }
     }
 }

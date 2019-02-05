@@ -72,15 +72,24 @@
     <Compile Include="House.cs">
       <DependentUpon>EasyLifeEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="HouseCreateWindow.xaml.cs">
+      <DependentUpon>HouseCreateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HousesWindow.xaml.cs">
       <DependentUpon>HousesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\HouseService.cs" />
+    <Compile Include="Services\ImageService.cs" />
     <Compile Include="Object.cs">
       <DependentUpon>EasyLifeEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Room.cs">
       <DependentUpon>EasyLifeEntity.tt</DependentUpon>
     </Compile>
+    <Page Include="HouseCreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HousesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

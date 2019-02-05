@@ -4,15 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyLifeAppDesktop"
-        mc:Ignorable="d" Height="450" Width="800" WindowState="Maximized" Title="Houses">
-    <Grid Opacity="0.8">
+        mc:Ignorable="d" Height="1000" Width="2000" WindowState="Maximized" Title="Houses">
+    <Grid Cursor="">
         <Grid.Background>
-            <ImageBrush ImageSource="Files/houses.jpg"/>
+            <ImageBrush ImageSource="Files/houses.jpg" Opacity="0.5"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="163*"/>
         </Grid.ColumnDefinitions>
-        <ListBox HorizontalAlignment="Left" Height="246" Name="housesList" Margin="27,25,0,0" BorderThickness="0" VerticalAlignment="Top" Width="255" Background="#803D4547" FontSize="36" FontWeight="Bold" Foreground="White"/>
+        <ListBox HorizontalAlignment="Left" x:Name="housesLb" Margin="33,135,0,70" BorderThickness="0" Width="348" Background="#803D4547" FontSize="36" FontWeight="Bold" Foreground="White" SelectionChanged="HousesList_SelectionChanged"/>
+        <Label x:Name="createLbl" Content="Create new House" HorizontalAlignment="Left" Margin="33,33,0,0" VerticalAlignment="Top" Width="348" FontSize="36" FontStyle="Italic" Foreground="#FFF90000" FontWeight="Bold" MouseLeftButtonUp="CreateLbl_MouseLeftButtonUp">
+            <Label.Background>
+                <SolidColorBrush Color="#FF807B7B" Opacity="0.5"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="actionLbl" Content="" HorizontalAlignment="Left" Margin="582,33,0,0" VerticalAlignment="Top" Height="86" Width="294" FontFamily="Agency FB" FontWeight="Bold" FontSize="60" FontStyle="Italic" Foreground="#FFFFFDFD" Visibility="Hidden">
+            <Label.Background>
+                <SolidColorBrush Color="#FF4B2E2E" Opacity="0.5"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="nameLbl" Content="Name : " HorizontalAlignment="Left" Margin="466,167,0,0" VerticalAlignment="Top" Height="56" Width="532" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="adressLbl" Content="Adress : " HorizontalAlignment="Left" Margin="466,249,0,0" VerticalAlignment="Top" Height="124" Width="532" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="stateLbl" Content="State : " HorizontalAlignment="Left" Margin="466,401,0,0" VerticalAlignment="Top" Height="56" Width="532" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="commentsLbl" Content="Comments" HorizontalAlignment="Left" Margin="466,493,0,0" VerticalAlignment="Top" Height="276" Width="532" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="51" Margin="679,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="606" FontSize="22" Visibility="Hidden" Opacity="0.6"/>
+        <TextBox x:Name="adressTb" HorizontalAlignment="Left" Height="51" Margin="679,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="606" FontSize="22" Visibility="Hidden" Opacity="0.6"/>
+        <TextBox x:Name="stateTb" HorizontalAlignment="Left" Height="51" Margin="679,406,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="606" FontSize="22" Visibility="Hidden" Opacity="0.6"/>
+        <TextBox x:Name="commentsTb" HorizontalAlignment="Left" Height="246" Margin="679,493,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="606" FontSize="22" Visibility="Hidden" Opacity="0.6"/>
 
     </Grid>
 </Window>
