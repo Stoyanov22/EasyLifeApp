@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyLifeAppDesktop"
         mc:Ignorable="d" Height="1000" Width="2000" WindowState="Maximized" Title="Houses">
-    <Grid Cursor="">
+    <Grid x:Name="grid" Cursor="">
         <Grid.Background>
             <ImageBrush ImageSource="Files/houses.jpg" Opacity="0.5"/>
         </Grid.Background>

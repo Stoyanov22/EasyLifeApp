@@ -11,7 +11,8 @@ namespace EasyLifeAppDesktop
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class House
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,6 +24,7 @@ namespace EasyLifeAppDesktop
         public int? HouseId { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
+        [MaxLength]
         public byte[] Photo { get; set; }
         public decimal State { get; set; }
         public string Comments { get; set; }

@@ -62,13 +62,13 @@ namespace EasyLifeAppDesktop
             commentsLbl.Content += house.Comments;
             if (house.Photo != null && house.Photo.Count() != 0)
             {
-                this.Background = new ImageBrush(imgService.LoadImage(house.Photo));
+                grid.Background = new ImageBrush(imgService.LoadImage(house.Photo));
             }
             else
             {
-                this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/EasyLifeAppDesktop;component/Files/houses.jpg")));
+                grid.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/EasyLifeAppDesktop;component/Files/houses.jpg")));
             }
-            Background.Opacity = 0.5;
+            grid.Background.Opacity = 0.5;
         }
     }
 }
