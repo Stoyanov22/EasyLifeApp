@@ -21,7 +21,7 @@ namespace EasyLifeAppDesktop
             this.Rooms = new HashSet<Room>();
         }
     
-        public int? HouseId { get; set; }
+        public int HouseId { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
         [MaxLength]

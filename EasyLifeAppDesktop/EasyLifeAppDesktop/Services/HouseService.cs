@@ -29,16 +29,45 @@ namespace EasyLifeAppDesktop.Services
             return house;
         }
 
-        public House GetHouseByName(string name)
+        public void EditHouseName(int id, string name)
         {
-            var house = el.Houses.SingleOrDefault(h => h.Name == name);
-            return house;
+            var house = GetHouse(id);
+            house.Name = name;
+            el.SaveChanges();
         }
 
-        public void EditHouseName(string oldName, string newName)
+        public void EditHouseAdress(int id, string adress)
         {
-            var house = GetHouseByName(oldName);
-            house.Name = newName;
+            var house = GetHouse(id);
+            house.Adress = adress;
+            el.SaveChanges();
+        }
+
+        public void EditHouseState(int id, decimal state)
+        {
+            var house = GetHouse(id);
+            house.State = state;
+            el.SaveChanges();
+        }
+               
+        public void EditHousePhoto(int id, byte[] photo)
+        {
+            var house = GetHouse(id);
+            house.Photo = photo;
+            el.SaveChanges();
+        }
+
+        public void EditHouseComments(int id, string comments)
+        {
+            var house = GetHouse(id);
+            house.Comments = comments;
+            el.SaveChanges();
+        }
+
+        public void DeleteHouseByName(string name)
+        {
+            var house = el.Houses.SingleOrDefault(h => h.Name == name);
+            el.Houses.Remove(house);
             el.SaveChanges();
         }
     }
